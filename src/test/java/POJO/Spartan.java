@@ -45,7 +45,8 @@ public class Spartan {
                 '}';
     }
 
-    public Spartan(String name, String gender, long phone) {
+    public Spartan(String name, String gender,long phone) {
+
         this.name = name;
         this.gender = gender;
         this.phone = phone;

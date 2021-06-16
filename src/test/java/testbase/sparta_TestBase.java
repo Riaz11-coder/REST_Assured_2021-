@@ -7,17 +7,16 @@ import org.junit.jupiter.api.BeforeAll;
 
 import static io.restassured.RestAssured.*;
 
-public class HR_ORDS_TestBase {
-
+public class sparta_TestBase {
     @BeforeAll
     public static void setUp(){
 
-        baseURI = ConfigurationReader.getProperty("ords.baseURL");
-        basePath = ConfigurationReader.getProperty("ords.basePath");
+        baseURI = ConfigurationReader.getProperty("spartan1.base_url");
+        basePath = ConfigurationReader.getProperty("spartan1.base_path");
         // create DB Connection here
-        DB_Utility.createConnection(ConfigurationReader.getProperty("hr.database.url"),
-                ConfigurationReader.getProperty("hr.database.username"),
-                ConfigurationReader.getProperty("hr.database.password")
+        DB_Utility.createConnection(ConfigurationReader.getProperty("spartan1.database.url"),
+                ConfigurationReader.getProperty("spartan1.database.username"),
+                ConfigurationReader.getProperty("spartan1.database.password")
         );
 
     }
@@ -30,6 +29,4 @@ public class HR_ORDS_TestBase {
     }
 
 
-
 }
-
